@@ -1,11 +1,23 @@
 {
-  "name": "ZSSN",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/icaroquintao/ZSSN.git",
-  "author": "Icaro Quintão <icarobicalho@hotmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "ZSSN",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/icaroquintao/ZSSN.git",
+    "author": "Icaro Quintão <icarobicalho@hotmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "node src/server.js",
+        "dev": "nodemon src/server.js --ignore __tests__",
+        "pretest": "NODE_ENV=test sequelize db:migrate",
+        "test": "NODE_ENV=test jest",
+        "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "pg": "^8.4.2",
+        "sequelize": "^6.3.5"
+    },
+    "devDependencies": {
+        "sequelize-cli": "^6.2.0"
+    }
 }
