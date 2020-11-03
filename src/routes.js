@@ -10,5 +10,8 @@ const routes = require("express").Router();
 //    longitude: '60°',
 //    reports: '0'
 //})
+const SobreviventeController = require('./app/controllers/SobreviventeController')
+
+routes.post('/criar', SobreviventeController.store);
 
 module.exports = routes;
