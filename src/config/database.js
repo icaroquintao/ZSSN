@@ -1,9 +1,10 @@
 module.exports = {
     host: '127.0.0.1',
-    username: '',
+    username: 'root',
     password: '',
     database: 'zssn',
-    dialect: 'postgres',
+    dialect: 'sqlite',
+    storage: "./src/database/zssn.sqlite",
     logging: false,
     define: {
         timestamps: true,
