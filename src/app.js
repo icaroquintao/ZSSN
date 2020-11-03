@@ -1,6 +1,3 @@
-require("dotenv").config({
-    path: process.env.NODE_ENV === "test" ? ".env.test" : ".env"
-});
 const express = require("express");
 //Separar a parte da aplicação com a parte de ouvir uma porta para testes!
 class AppController {
